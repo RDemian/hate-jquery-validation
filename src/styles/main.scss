@@ -1,0 +1,33 @@
+$desktops: rem(1200px);
+$laptops: rem(992px);
+$tablets: rem(768px);
+$phones: rem(480px);
+
+@function rem($pixels) {
+  @return #{$pixels / 16px}rem;
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptops){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablets){
+    @content;
+  }
+}
+
+@mixin phone {
+  @media screen and (max-width: $phones){
+    @content;
+  }
+}
+
+@import "./common/_normalize.scss";
+@import "./common/_fonts.scss";
+@import "./common/_general.scss";
+
+
+@import "./pages/_index.scss";
