@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Зарегистрируйся, по-братски</title>
+    <title>Страница регистрации | JQuery Validation &amp; fancyBox</title>
     <meta content="Matvey Phoenix" name="author">
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -34,24 +34,24 @@
             <label class="form__label" for="password">Пароль</label>
           </div>
           <div class="form__row">
-            <input class="form__input" type="password" id="returnPassword" name="password" required>
+            <input class="form__input" type="password" id="returnPassword" name="returnPassword" required>
             <label class="form__label" for="returnPassword">Повторите пароль</label>
           </div>
           <div class="form__row">
-            <input class="form__input" type="email" id="email" required>
+            <input class="form__input" type="email" id="email" name="email" required>
             <label class="form__label" for="email">Почта</label>
           </div>
           <div class="form__row">
-            <input class="form__input" type="tel" id="phone" required>
+            <input class="form__input" type="tel" id="phone" name="phone" required>
             <label class="form__label" for="phone">Телефон</label>
           </div>
           <div class="form__row">
             <div class="form__column">
-              <input class="form__input" type="text" id="country" required>
+              <input class="form__input" type="text" id="country" name="county" required>
               <label class="form__label" for="country">Страна</label>
             </div>
             <div class="form__column">
-              <input class="form__input" type="text" id="city" required>
+              <input class="form__input" type="text" id="city" name="city" required>
               <label class="form__label" for="city">Город</label>
             </div>
             <div class="form__row">
@@ -69,6 +69,7 @@
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="./assets/scripts/libs.min.js"></script>
     <script src="./assets/scripts/script.min.js"></script>
   </body>

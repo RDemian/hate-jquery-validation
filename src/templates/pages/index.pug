@@ -1,7 +1,7 @@
 extends ../_template
 
 block variables
-  - var title = "Зарегистрируйся, по-братски"
+  - var title = "Страница регистрации | JQuery Validation & fancyBox"
 
 block content
   .registration
@@ -22,23 +22,23 @@ block content
         label.form__label(for="password") Пароль
 
       .form__row
-        input(type="password" id="returnPassword" class="form__input" name="password" required) 
+        input(type="password" id="returnPassword" class="form__input" name="returnPassword" required) 
         label.form__label(for="returnPassword") Повторите пароль
 
       .form__row
-        input(type="email" id="email" class="form__input" required) 
+        input(type="email" id="email" class="form__input" name="email" required) 
         label.form__label(for="email") Почта
 
       .form__row
-        input(type="tel" id="phone" class="form__input" required) 
+        input(type="tel" id="phone" class="form__input" name="phone" required) 
         label.form__label(for="phone") Телефон
 
       .form__row
         .form__column
-          input(type="text" id="country" class="form__input" required) 
+          input(type="text" id="country" class="form__input" name="county" required) 
           label.form__label(for="country") Страна
         .form__column
-          input(type="text" id="city" class="form__input" required) 
+          input(type="text" id="city" class="form__input" name="city" required) 
           label.form__label(for="city") Город
 
         .form__row
