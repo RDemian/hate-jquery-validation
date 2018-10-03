@@ -7,7 +7,7 @@
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
-    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon"><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/main.min.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
@@ -44,7 +44,7 @@
             </div>
             <div class="form__row">
               <label class="form__label" for="email">Почта</label>
-              <input class="form__input" type="email" id="email" name="email" required>
+              <input class="form__input" type="text" id="email" name="email" required>
             </div>
             <div class="form__row">
               <label class="form__label" for="phone">Телефон</label>
@@ -65,6 +65,11 @@
             </div>
           </form>
         </div>
+      </div>
+      <div class="popup-wrap"></div>
+      <div class="popup"><img class="popup__close" src="./assets/images/close.png">
+        <div class="popup__title">Congratulation!</div><img class="popup__img" src="./assets/images/success.png">
+        <div class="popup__text">Вы успешно зарегистрировались. Держитесь здесь, вам всего доброго, хорошего настроения и здоровья.</div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

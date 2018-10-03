@@ -31,7 +31,7 @@ block content
 
         .form__row
           label.form__label(for="email") Почта
-          input(type="email" id="email" class="form__input" name="email" required) 
+          input(type="text" id="email" class="form__input" name="email" required) 
 
         .form__row
           label.form__label(for="phone") Телефон
@@ -47,3 +47,10 @@ block content
 
         .form__row
             button(type="submit" class="form__submit") Зарегистрировать аккаунт
+
+  .popup-wrap
+  .popup
+    img(src="./assets/images/close.png").popup__close
+    .popup__title Congratulation!
+    img(src="./assets/images/success.png").popup__img
+    .popup__text Вы успешно зарегистрировались. Держитесь здесь, вам всего доброго, хорошего настроения и здоровья.

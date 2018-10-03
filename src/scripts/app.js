@@ -4,15 +4,37 @@ $(document).ready(function () {
 
     $form.on('submit', (e) => {
         e.preventDefault();
-    })
+    });
 
-    // $phone.inputmask('+7 (999) 999 99 99');
+    const $popupWrap = $('.popup-wrap');
+    const $popup = $('.popup');
+    const $close = $('.popup__close');
+
+    function openPopup() {
+        $popupWrap.css('display', 'block');
+        $popup.css('display', 'flex');
+
+        $close.on('click', () => {
+            $popupWrap.css('display', 'none');
+            $popup.css('display', 'none');
+        });
+    };
+
+    $.validator.addMethod("passwordText", function (value, element) {
+        return this.optional(element) || /^(?=.*\d)(?=.*[a-z]).*$/.test(value);
+    }, "Пароль должен состоять из цифр и английских букв");
+
+    $.validator.addMethod("emailText", function (value, element) {
+        return this.optional(element) || /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/.test(value);
+    }, 'Введите корректный почтовый адрес');
 
     $form.validate({
 
         debug: true,
 
         submitHandler: function (form, event) {
+            openPopup();
+            $form[0].reset();
             console.log('Форма успешно отправлена!');
         },
 
@@ -23,8 +45,6 @@ $(document).ready(function () {
         errorElement: 'div',
 
         errorClass: 'form__input_error',
-
-        validClass: 'form__input_valid',
 
         rules: {
             firstName: {
@@ -41,20 +61,23 @@ $(document).ready(function () {
             },
             password: {
                 required: true,
+                passwordText: true,
                 minlength: 6,
             },
             returnPassword: {
                 required: true,
+                passwordText: true,
                 minlength: 6,
                 equalTo: '#password',
             },
             email: {
                 required: true,
-                email: true,
+                emailText: true,
                 minlength: 6,
             },
             phone: {
                 required: true,
+                digits: true,
                 minlength: 11,
             },
             country: {
@@ -92,11 +115,11 @@ $(document).ready(function () {
             email: {
                 required: 'Это обязательное поле',
                 minlength: 'Почта должна быть длиннее 5 символов',
-                email: 'Введите корректную почту',
             },
             phone: {
                 required: 'Это обязательное поле',
                 minlength: 'Номер должен быть длиннее 11 символов',
+                digits: 'Номер должен состоять только из цифр'
             },
             country: {
                 required: 'Это обязательное поле',
