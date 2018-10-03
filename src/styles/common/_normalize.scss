@@ -178,8 +178,14 @@ template {
     box-sizing: inherit; 
   }
   
-  body, html {
+  body {
     height: 100%;
+  }
+
+  html {
+      @include above(421px) {
+        height: 100%;
+      }
   }
   
   body {

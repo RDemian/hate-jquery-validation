@@ -27,11 +27,11 @@ $(document).ready(function () {
 
     $.validator.addMethod("passwordText", function (value, element) {
         return this.optional(element) || /^(?=.*\d)(?=.*[a-z]).*$/.test(value);
-    }, "Пароль должен состоять из цифр и английских букв");
+    }, "Только цифры и буквы");
 
     $.validator.addMethod("emailText", function (value, element) {
         return this.optional(element) || /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/.test(value);
-    }, 'Введите корректный почтовый адрес');
+    }, 'Некорректный адрес');
 
     $form.validate({
 
@@ -40,6 +40,7 @@ $(document).ready(function () {
         submitHandler: function (form, event) {
             openPopup();
             $form[0].reset();
+            $('.form__input').removeClass('form__input_valid');
             console.log('Форма успешно отправлена!');
         },
 
@@ -50,6 +51,8 @@ $(document).ready(function () {
         errorElement: 'div',
 
         errorClass: 'form__input_error',
+
+        validClass: 'form__input_valid',
 
         rules: {
             firstName: {
@@ -85,10 +88,6 @@ $(document).ready(function () {
                 digits: true,
                 minlength: 11,
             },
-            country: {
-                required: true,
-                minlength: 2,
-            },
             city: {
                 required: true,
                 minlength: 2,
@@ -97,42 +96,38 @@ $(document).ready(function () {
 
         messages: {
             firstName: {
-                required: 'Это обязательное поле',
-                minlength: 'Имя должно быть длиннее 2 символов',
+                required: 'Обязательное поле',
+                minlength: 'Короче 2 символов',
             },
             secondName: {
-                required: 'Это обязательное поле',
-                minlength: 'Фамилия должна быть длиннее 2 символов',
+                required: 'Обязательное поле',
+                minlength: 'Короче 2 символов',
             },
             username: {
-                required: 'Это обязательное поле',
-                minlength: 'Логин должен быть длиннее 4 символов',
+                required: 'Обязательное поле',
+                minlength: 'Короче 4 символов',
             },
             password: {
-                required: 'Это обязательное поле',
-                minlength: 'Пароль должен быть длиннее 6 символов',
+                required: 'Обязательное поле',
+                minlength: 'Короче 6 символов',
             },
             returnPassword: {
-                required: 'Это обязательное поле',
-                minlength: 'Пароль должен быть длиннее 6 символов',
+                required: 'Обязательное поле',
+                minlength: 'Короче 6 символов',
                 equalTo: 'Пароли не совпадают',
             },
             email: {
-                required: 'Это обязательное поле',
-                minlength: 'Почта должна быть длиннее 5 символов',
+                required: 'Обязательное поле',
+                minlength: 'Короче 5 символов',
             },
             phone: {
-                required: 'Это обязательное поле',
-                minlength: 'Номер должен быть длиннее 11 символов',
-                digits: 'Номер должен состоять только из цифр'
-            },
-            country: {
-                required: 'Это обязательное поле',
-                minlength: 'Страна должна быть длиннее 2 символов',
+                required: 'Обязательное поле',
+                minlength: 'Короче 11 символов',
+                digits: 'Только цифры'
             },
             city: {
-                required: 'Это обязательное поле',
-                minlength: 'Город должен быть длиннее 2 символов',
+                required: 'Обязательное поле',
+                minlength: 'Короче 2 символов',
             },
         }
     });

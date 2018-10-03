@@ -1,14 +1,15 @@
 extends ../_template
 
 block variables
-  - var title = "Страница регистрации | JQuery Validation & Popup"
+  - var title = "Страница регистрации | JQuery Validation & popup"
 
 block content
   .registration
     .registration__column.registration__column_left
       .registration__images
-    .registratin__column
+    .registratin__column.registration__column_right
       form.form(action="" method="post" novalidate)
+        .registration__title Форма регистрации
         .form__row
           .form__column
             label.form__label(for="firstName") Имя
@@ -18,35 +19,28 @@ block content
             label.form__label(for="secondName") Фамилия
             input(type="text" id="secondName" class="form__input" name="secondName" required) 
         .form__row
-          label.form__label(for="username") Логин
-          input(type="text" id="username" class="form__input" name="username" required) 
-
-        .form__row
-          label.form__label(for="password") Пароль
-          input(type="password" id="password" class="form__input" name="password" required)
-
-        .form__row
-          label.form__label(for="returnPassword") Повторите пароль
-          input(type="password" id="returnPassword" class="form__input" name="returnPassword" required) 
-
-        .form__row
-          label.form__label(for="email") Почта
-          input(type="text" id="email" class="form__input" name="email" required) 
-
-        .form__row
-          label.form__label(for="phone") Телефон
-          input(type="tel" id="phone" class="form__input" name="phone" required)
-
+          .form__column
+            label.form__label(for="password") Пароль
+            input(type="password" id="password" class="form__input" name="password" required)
+          .form__column
+            label.form__label(for="returnPassword") Повторите пароль
+            input(type="password" id="returnPassword" class="form__input" name="returnPassword" required)
         .form__row
           .form__column
-            label.form__label(for="country") Страна
-            input(type="text" id="country" class="form__input" name="country" required) 
+            label.form__label(for="email") Почта
+            input(type="text" id="email" class="form__input" name="email" required) 
+          .form__column
+            label.form__label(for="username") Логин
+            input(type="text" id="username" class="form__input" name="username" required)
+        .form__row
+          .form__column
+            label.form__label(for="phone") Телефон
+            input(type="tel" id="phone" class="form__input" name="phone" required)
           .form__column
             label.form__label(for="city") Город
             input(type="text" id="city" class="form__input" name="city" required) 
 
-        .form__row
-            button(type="submit" class="form__submit") Зарегистрировать аккаунт
+        button(type="submit" class="form__submit") Зарегистрировать аккаунт
 
   .popup-wrap
   .popup

@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Страница регистрации | JQuery Validation &amp; Popup</title>
+    <title>Страница регистрации | JQuery Validation &amp; popup</title>
     <meta content="Matvey Phoenix" name="author">
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -17,8 +17,9 @@
         <div class="registration__column registration__column_left">
           <div class="registration__images"></div>
         </div>
-        <div class="registratin__column">
+        <div class="registratin__column registration__column_right">
           <form class="form" action="" method="post" novalidate>
+            <div class="registration__title">Форма регистрации</div>
             <div class="form__row">
               <div class="form__column">
                 <label class="form__label" for="firstName">Имя</label>
@@ -31,38 +32,36 @@
               </div>
             </div>
             <div class="form__row">
-              <label class="form__label" for="username">Логин</label>
-              <input class="form__input" type="text" id="username" name="username" required>
-            </div>
-            <div class="form__row">
-              <label class="form__label" for="password">Пароль</label>
-              <input class="form__input" type="password" id="password" name="password" required>
-            </div>
-            <div class="form__row">
-              <label class="form__label" for="returnPassword">Повторите пароль</label>
-              <input class="form__input" type="password" id="returnPassword" name="returnPassword" required>
-            </div>
-            <div class="form__row">
-              <label class="form__label" for="email">Почта</label>
-              <input class="form__input" type="text" id="email" name="email" required>
-            </div>
-            <div class="form__row">
-              <label class="form__label" for="phone">Телефон</label>
-              <input class="form__input" type="tel" id="phone" name="phone" required>
+              <div class="form__column">
+                <label class="form__label" for="password">Пароль</label>
+                <input class="form__input" type="password" id="password" name="password" required>
+              </div>
+              <div class="form__column">
+                <label class="form__label" for="returnPassword">Повторите пароль</label>
+                <input class="form__input" type="password" id="returnPassword" name="returnPassword" required>
+              </div>
             </div>
             <div class="form__row">
               <div class="form__column">
-                <label class="form__label" for="country">Страна</label>
-                <input class="form__input" type="text" id="country" name="country" required>
+                <label class="form__label" for="email">Почта</label>
+                <input class="form__input" type="text" id="email" name="email" required>
+              </div>
+              <div class="form__column">
+                <label class="form__label" for="username">Логин</label>
+                <input class="form__input" type="text" id="username" name="username" required>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="form__column">
+                <label class="form__label" for="phone">Телефон</label>
+                <input class="form__input" type="tel" id="phone" name="phone" required>
               </div>
               <div class="form__column">
                 <label class="form__label" for="city">Город</label>
                 <input class="form__input" type="text" id="city" name="city" required>
               </div>
             </div>
-            <div class="form__row">
-              <button class="form__submit" type="submit">Зарегистрировать аккаунт</button>
-            </div>
+            <button class="form__submit" type="submit">Зарегистрировать аккаунт</button>
           </form>
         </div>
       </div>
