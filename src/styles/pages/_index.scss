@@ -5,18 +5,44 @@
 
     height: 100%;
 
-    background-image: linear-gradient(to right, #3b67b2, #504fad);
+    background-color: #1e243c;
 }
 
 .registration {
     max-width: rem(920px);
     width: 100%;
     padding: rem(50px);
+    display: flex;
 
     border-radius: rem(5px);
     background-color: #fbfbfb;
+
+    &__column {
+
+        &_left {
+            margin-right: 40px;
+        }
+    }
+
+    &__images {
+        width: 270px;
+        height: 550px;
+
+        background: url('/assets/images/preview.jpg') center center no-repeat;
+        background-size: contain;
+    }
 }
 
-.error {
-    color: red;
+.form {
+
+    &__input {
+
+        &_valid {
+            border-color: green;
+        }
+
+        &_error {
+            border-color: red;
+        }
     }
+}

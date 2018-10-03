@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Страница регистрации | JQuery Validation &amp; fancyBox</title>
+    <title>Страница регистрации | JQuery Validation &amp; Popup</title>
     <meta content="Matvey Phoenix" name="author">
     <meta content="" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
@@ -14,62 +14,60 @@
   <body>
     <div class="wrapper">
       <div class="registration">
-        <form class="form" action="" method="post" novalidate>
-          <div class="form__row">
-            <div class="form__column">
-              <input class="form__input" type="text" id="firstName" name="firstName" required>
-              <label class="form__label" for="firstName">Имя</label>
-            </div>
-            <div class="form__column">
-              <input class="form__input" type="text" id="secondName" name="secondName" required>
-              <label class="form__label" for="secondName">Фамилия</label>
-            </div>
-          </div>
-          <div class="form__row">
-            <input class="form__input" type="text" id="username" name="username" required>
-            <label class="form__label" for="username">Логин</label>
-          </div>
-          <div class="form__row">
-            <input class="form__input" type="password" id="password" name="password" required>
-            <label class="form__label" for="password">Пароль</label>
-          </div>
-          <div class="form__row">
-            <input class="form__input" type="password" id="returnPassword" name="returnPassword" required>
-            <label class="form__label" for="returnPassword">Повторите пароль</label>
-          </div>
-          <div class="form__row">
-            <input class="form__input" type="email" id="email" name="email" required>
-            <label class="form__label" for="email">Почта</label>
-          </div>
-          <div class="form__row">
-            <input class="form__input" type="tel" id="phone" name="phone" required>
-            <label class="form__label" for="phone">Телефон</label>
-          </div>
-          <div class="form__row">
-            <div class="form__column">
-              <input class="form__input" type="text" id="country" name="county" required>
-              <label class="form__label" for="country">Страна</label>
-            </div>
-            <div class="form__column">
-              <input class="form__input" type="text" id="city" name="city" required>
-              <label class="form__label" for="city">Город</label>
+        <div class="registration__column registration__column_left">
+          <div class="registration__images"></div>
+        </div>
+        <div class="registratin__column">
+          <form class="form" action="" method="post" novalidate>
+            <div class="form__row">
+              <div class="form__column">
+                <label class="form__label" for="firstName">Имя</label>
+                <input class="form__input" type="text" id="firstName" name="firstName" required>
+                <div class="form__input-message"></div>
+              </div>
+              <div class="form__column">
+                <label class="form__label" for="secondName">Фамилия</label>
+                <input class="form__input" type="text" id="secondName" name="secondName" required>
+              </div>
             </div>
             <div class="form__row">
-              <input class="form__checkbox" type="checkbox" id="checkbox" required>
-              <label for="checkbox">
-                <div class="form__fake"></div>
-                <div class="form__licence">Мне исполнилось 18, и я согласен (согласна) с условиями лицензионного соглашения (которого нет).</div>
-              </label>
+              <label class="form__label" for="username">Логин</label>
+              <input class="form__input" type="text" id="username" name="username" required>
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="password">Пароль</label>
+              <input class="form__input" type="password" id="password" name="password" required>
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="returnPassword">Повторите пароль</label>
+              <input class="form__input" type="password" id="returnPassword" name="returnPassword" required>
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="email">Почта</label>
+              <input class="form__input" type="email" id="email" name="email" required>
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="phone">Телефон</label>
+              <input class="form__input" type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form__row">
+              <div class="form__column">
+                <label class="form__label" for="country">Страна</label>
+                <input class="form__input" type="text" id="country" name="country" required>
+              </div>
+              <div class="form__column">
+                <label class="form__label" for="city">Город</label>
+                <input class="form__input" type="text" id="city" name="city" required>
+              </div>
             </div>
             <div class="form__row">
               <button class="form__submit" type="submit">Зарегистрировать аккаунт</button>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
     <script src="./assets/scripts/libs.min.js"></script>
     <script src="./assets/scripts/script.min.js"></script>
   </body>

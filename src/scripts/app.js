@@ -6,13 +6,25 @@ $(document).ready(function () {
         e.preventDefault();
     })
 
-    $phone.inputmask('+7 (999) 999 99 99');
+    // $phone.inputmask('+7 (999) 999 99 99');
 
     $form.validate({
 
-        submitHandler: function (form) {
+        debug: true,
+
+        submitHandler: function (form, event) {
             console.log('Форма успешно отправлена!');
         },
+
+        invalidHandler: function (event, validator) {
+            console.warn('Форма заполнена с ошибками!');
+        },
+
+        errorElement: 'div',
+
+        errorClass: 'form__input_error',
+
+        validClass: 'form__input_valid',
 
         rules: {
             firstName: {
@@ -43,7 +55,7 @@ $(document).ready(function () {
             },
             phone: {
                 required: true,
-                minlength: 18,
+                minlength: 11,
             },
             country: {
                 required: true,
