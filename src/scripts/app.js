@@ -18,6 +18,11 @@ $(document).ready(function () {
             $popupWrap.css('display', 'none');
             $popup.css('display', 'none');
         });
+
+        $popupWrap.on('click', () => {
+            $popupWrap.css('display', 'none');
+            $popup.css('display', 'none');
+        });
     };
 
     $.validator.addMethod("passwordText", function (value, element) {
